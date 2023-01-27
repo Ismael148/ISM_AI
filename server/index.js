@@ -18,6 +18,12 @@ app.use(cors());
 
 const port = 3080;
 
+app.get('/', async (req, res) => {
+  res.status(200).send({
+    message: 'Hello I am Ismael',
+  });
+});
+
 app.post('/', async (req, res) => {
   const { message, currentModel } = req.body;
   // console.log(message, 'message');
